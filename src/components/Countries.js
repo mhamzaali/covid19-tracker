@@ -6,7 +6,6 @@ import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Grid from '@material-ui/core/Grid';
-import NumberFormat from 'react-number-format';
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper';
 import CountUp from 'react-countup';
@@ -105,9 +104,6 @@ export default function Mycountry() {
     }, [])
 
     // function for handling change in data or type of data
-    function handleScreenDataType(event) {
-        setScreenType(event.target.value);
-    }
 
     function handleCountryChange(event) {
         setCountryCode(event.target.value);        

@@ -72,20 +72,18 @@ export default function GlobalCharts() {
     const classes = useStyles();
 
     const [GlobalData, SetGlobalData] = useState();
-    const [LoadingData, SetLoadingData] = useState(false);
 
     useEffect(() => {
         async function fetchGlobalData() {
-            SetLoadingData(true);
+
             const apiResponse = await fetch('https://api.thevirustracker.com/free-api?global=stats');
             const dataFromAPI = await apiResponse.json();
-            SetLoadingData(false);
+
             SetGlobalData(dataFromAPI);
         }
         fetchGlobalData();
     }, []);
-    const Loading = 'Loading...';
-
+    
     const data = {
         labels: ['Total Cases', 'Total Deaths', 'Total Recoverd','Critical Cases'],
 
