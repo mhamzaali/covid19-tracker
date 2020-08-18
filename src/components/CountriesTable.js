@@ -23,14 +23,6 @@ const StyledTableCell = withStyles((theme) => ({
     minWidth: 700,
   },
 }))(TableCell);
-const StyledTableRow = withStyles((theme) => ({
-    root: {
-        '&:nth-of-type(odd)': {
-            backgroundColor: '#64e9ee',
-        },
-    },
-}))(TableRow);
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
